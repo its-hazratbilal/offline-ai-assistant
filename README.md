@@ -64,7 +64,7 @@ The application allows users to:
 - 🔄 Switch AI models without restarting the app
 - 💬 Session-based chat history
 - 📂 Conversation grouping (Today, Yesterday, This Week, Older)
-- 🕵️ Private Chat mode (never stored locally)
+- 🕵️ Private Chat mode
 - ✍️ Writing & rewriting assistant
 - 📄 Resume & CV generation
 - 📝 Email writing assistant
