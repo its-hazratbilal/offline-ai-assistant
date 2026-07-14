@@ -23,7 +23,6 @@
   <img src="https://img.shields.io/badge/Clean-Architecture-00C853?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/llama.cpp-JNI-000000?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/C%2B%2B-JNI-00599C?style=for-the-badge&logo=cplusplus"/>
-  <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge"/>
 </p>
 
 ---
