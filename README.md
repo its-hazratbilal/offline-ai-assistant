@@ -6,9 +6,9 @@
 
 <p align="center">
   <img src="https://img.shields.io/github/stars/its-hazratbilal/offline-ai-assistant?style=for-the-badge"/>
+  <img src="https://img.shields.io/github/license/its-hazratbilal/offline-ai-assistant?style=for-the-badge"/>
   <img src="https://img.shields.io/github/last-commit/its-hazratbilal/offline-ai-assistant?style=for-the-badge"/>
   <img src="https://img.shields.io/github/issues/its-hazratbilal/offline-ai-assistant?style=for-the-badge"/>
-  <img src="https://img.shields.io/github/license/its-hazratbilal/offline-ai-assistant?style=for-the-badge"/>
 </p>
 
 <p align="center">
