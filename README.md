@@ -573,6 +573,6 @@ Please refer to the **LICENSE** file for complete details.
 
 <p align="center">
 
-Made with ❤️ using Kotlin, Jetpack Compose, and llama.cpp
+Build with ❤️ using Kotlin, Jetpack Compose, and llama.cpp
 
 </p>
