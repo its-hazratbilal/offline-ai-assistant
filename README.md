@@ -27,7 +27,7 @@
 
 ---
 
-# 📱 Overview
+## 📱 Overview
 
 **Offline AI Assistant** is a modern Android application that brings powerful AI directly to your device.
 
@@ -35,11 +35,11 @@ Unlike cloud-based AI assistants, every conversation runs locally using **GGUF l
 
 Once a model is downloaded, all AI inference happens completely on-device.
 
-Designed with a privacy-first approach, the app provides a smooth and modern chat experience while supporting multiple open-source language models.
+Designed with a privacy-first philosophy, the app provides a smooth and modern chat experience while supporting multiple open-source language models.
 
 ---
 
-# ✨ Features
+## ✨ Features
 
 - 🧠 Fully offline AI conversations
 - 📥 Download and manage GGUF language models
@@ -64,7 +64,7 @@ Designed with a privacy-first approach, the app provides a smooth and modern cha
 
 ---
 
-# 🤖 Supported Models
+## 🤖 Supported Models
 
 The application currently supports the following GGUF models:
 
@@ -73,12 +73,23 @@ The application currently supports the following GGUF models:
 | SmolLM2 360M | Q4_K_M | **258 MB** | 2 GB+ |
 | Qwen 2.5 Mini (0.5B) | Q4_K_M | **468 MB** | 3 GB+ |
 | TinyLlama 1.1B | Q4_K_M | **637 MB** | 4 GB+ |
-| Gemma 3 1B ⭐ Recommended | Q4_K_M | **768 MB** | 6 GB+ |
+| **Gemma 3 1B (Recommended)** | Q4_K_M | **768 MB** | 6 GB+ |
 | Gemma 3 Advanced (4B) | Q4_K_M | **2.37 GB** | 8 GB+ |
 
 ---
 
-# 🛠 Tech Stack
+## 📱 Device Requirements
+
+| Requirement | Recommended |
+|-------------|-------------|
+| Android Version | Android 11 (API 30)+ |
+| RAM | 4 GB minimum (8 GB+ recommended) |
+| Storage | Up to 3 GB free for larger models |
+| Internet | Required only for downloading models |
+
+---
+
+## 🛠 Tech Stack
 
 | Technology | Purpose |
 |------------|----------|
@@ -95,13 +106,13 @@ The application currently supports the following GGUF models:
 | Kotlin Flow | Reactive UI state |
 | OkHttp | GGUF model downloading |
 | llama.cpp | Local LLM inference engine |
-| JNI / C++ | Native AI integration |
+| C++ / JNI | Native AI integration |
 | Android SpeechRecognizer | Voice input |
 | Android TextToSpeech | Voice output |
 
 ---
 
-# 🧠 Architecture
+## 🧠 Architecture
 
 ```text
 Presentation Layer
@@ -136,7 +147,7 @@ AI Layer
 
 ---
 
-# 📂 Project Structure
+## 📂 Project Structure
 
 ```text
 offline-ai-assistant
@@ -189,7 +200,7 @@ offline-ai-assistant
 
 ---
 
-# 📦 Package Overview
+## 📦 Package Overview
 
 | Package | Responsibility |
 |----------|----------------|
@@ -202,45 +213,22 @@ offline-ai-assistant
 
 ---
 
-# 🏗️ Architecture Principles
+## 🏗️ Architecture Principles
 
-This project follows modern Android development best practices.
+This project follows modern Android development best practices:
 
-### MVVM
-
-Each screen is backed by its own ViewModel exposing immutable UI state through **StateFlow**.
-
-### Clean Architecture
-
-Responsibilities are separated into Presentation, Domain and Data layers, making the project easier to maintain and extend.
-
-### Repository Pattern
-
-Repositories act as the single source of truth while hiding implementation details from the presentation layer.
-
-### Dependency Injection
-
-Hilt is used to provide dependencies throughout the application.
-
-### Reactive UI
-
-The UI is completely reactive using:
-
-- StateFlow
-- Coroutines
-- Jetpack Compose
-
-### Offline-First
-
-After downloading a model, all AI inference happens locally without requiring internet access.
-
-### Native AI Integration
-
-The application integrates **llama.cpp** through JNI to perform efficient on-device inference using GGUF models.
+- MVVM Architecture
+- Clean Architecture
+- Repository Pattern
+- Single Source of Truth
+- Dependency Injection with Hilt
+- StateFlow + Coroutines
+- Offline-first design
+- Native AI inference using JNI & llama.cpp
 
 ---
 
-# 🔄 AI Model Lifecycle
+## 🔄 AI Model Lifecycle
 
 ```text
 User selects a model
@@ -266,7 +254,7 @@ Start chatting
 
 ---
 
-# ⚙️ How AI Works
+## ⚙️ How AI Works
 
 ```text
 User Prompt
@@ -304,26 +292,7 @@ AI Response
 
 ---
 
-# 🚀 Why This Project?
-
-Offline AI Assistant demonstrates how to build a production-quality Android application around modern on-device AI technologies.
-
-It showcases:
-
-- Modern Android app architecture
-- Native C++ integration through JNI
-- Local LLM inference with llama.cpp
-- GGUF model management
-- Room database persistence
-- DataStore preferences
-- Dependency Injection with Hilt
-- Reactive UI using StateFlow
-- Offline-first application design
-- Material 3 UI with Jetpack Compose
-
----
-
-# 📸 Screenshots
+## 📸 Screenshots
 
 <p align="center">
   <img src="./screenshots/chat-1.png" width="180"/>
@@ -335,7 +304,7 @@ It showcases:
 
 ---
 
-# 🎥 Demo
+## 🎥 Demo
 
 A demo video will be added soon.
 
@@ -343,9 +312,9 @@ A demo video will be added soon.
 
 ---
 
-# 🚀 Getting Started
+## 🚀 Getting Started
 
-## Prerequisites
+### Prerequisites
 
 Before building the project, install:
 
@@ -357,7 +326,7 @@ Before building the project, install:
 
 ---
 
-## Clone the Repository
+### Clone the Repository
 
 ```bash
 git clone https://github.com/its-hazratbilal/offline-ai-assistant.git
@@ -367,7 +336,7 @@ Open the project in Android Studio.
 
 ---
 
-## Native Build Requirements
+### Native Build Requirements
 
 This project compiles **llama.cpp** from source using the Android NDK.
 
@@ -380,7 +349,7 @@ The first build may take a few minutes while the native library is compiled.
 
 ---
 
-## Build & Run
+### Build & Run
 
 Simply run the **app** module on an Android device.
 
@@ -399,17 +368,15 @@ After launching the app:
 
 ---
 
-# 📦 Download
+## 📦 Download
 
 Prebuilt APKs are available from the GitHub Releases page.
 
-👉 **Releases**
-
-https://github.com/its-hazratbilal/offline-ai-assistant/releases
+👉 **[Download the latest APK](https://github.com/its-hazratbilal/offline-ai-assistant/releases)**
 
 ---
 
-# 🧪 Tested On
+## 🧪 Tested On
 
 The application has been tested on Android devices running Android 11 and above.
 
@@ -423,7 +390,7 @@ Larger models provide better responses but require more memory.
 
 ---
 
-# 🤝 Contributing
+## 🤝 Contributing
 
 Contributions are always welcome!
 
@@ -452,26 +419,26 @@ git push origin feature/my-feature
 
 ---
 
-# 🛣️ Roadmap
+## 🛣️ Roadmap
 
 Planned features include:
 
-- [ ] Code syntax highlighting
 - [ ] Chat search
 - [ ] Chat pinning
-- [ ] Image understanding (vision models)
+- [ ] Code syntax highlighting
 - [ ] Document summarization
-- [ ] RAG (Retrieval-Augmented Generation)
+- [ ] Image understanding (Vision models)
+- [ ] RAG support
 - [ ] Function calling
-- [ ] Better GPU acceleration
-- [ ] More GGUF model support
 - [ ] Streaming response improvements
+- [ ] More GGUF models
+- [ ] Better GPU acceleration
 - [ ] Tablet UI optimization
 - [ ] Compose Multiplatform support
 
 ---
 
-# 🎯 What This Project Demonstrates
+## 🎯 What This Project Demonstrates
 
 Offline AI Assistant showcases a production-style Android application built around modern on-device AI technologies.
 
@@ -495,7 +462,7 @@ The project is intended to serve as both a real-world AI application and a refer
 
 ---
 
-# 📚 Open Source Models
+## 📚 Open Source Models
 
 Offline AI Assistant supports GGUF-quantized models from the open-source AI community, including:
 
@@ -508,7 +475,7 @@ New models can easily be added by extending the built-in model catalog.
 
 ---
 
-# 🙏 Acknowledgements
+## 🙏 Acknowledgements
 
 A huge thank you to the amazing open-source community and projects that made this application possible.
 
@@ -540,7 +507,7 @@ Kotlin • Jetpack Compose • MVVM • Clean Architecture • Kotlin Multiplatf
 
 ---
 
-# ⭐ Support
+## ⭐ Support
 
 If you found this project useful, please consider supporting it by:
 
@@ -555,24 +522,16 @@ Every contribution and star helps the project grow.
 
 ---
 
-# 📄 License
+## 📄 License
 
 This project is licensed under the **MIT License**.
 
-You are free to:
-
-- ✅ Use
-- ✅ Modify
-- ✅ Distribute
-- ✅ Learn from the code
-- ✅ Build your own applications
-
-Please refer to the **LICENSE** file for complete details.
+See the [LICENSE](LICENSE) file for details.
 
 ---
 
 <p align="center">
 
-Build with ❤️ using Kotlin, Jetpack Compose, and llama.cpp
+Built with ❤️ using Kotlin, Jetpack Compose, and llama.cpp
 
 </p>
