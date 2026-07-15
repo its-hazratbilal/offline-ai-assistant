@@ -538,8 +538,6 @@ Kotlin • Jetpack Compose • MVVM • Clean Architecture • Kotlin Multiplatf
 [![GitHub](https://img.shields.io/badge/GitHub-its--hazratbilal-181717?style=flat&logo=github)](https://github.com/its-hazratbilal)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Hazrat%20Bilal-0077B5?style=flat&logo=linkedin)](https://linkedin.com/in/its-hazratbilal)
 
-If you enjoy this project, feel free to connect or reach out.
-
 ---
 
 # ⭐ Support
