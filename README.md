@@ -45,16 +45,6 @@ Designed with a privacy-first approach, the app provides a smooth and modern cha
 - 🧠 Multiple GGUF language models
 - 🎨 Modern Material 3 UI
 
-The application allows users to:
-
-- Chat completely offline
-- Download and switch AI models
-- Generate emails and resumes
-- Rewrite and summarize text
-- Translate languages
-- Get programming assistance
-- Export and share conversations
-
 ---
 
 # ✨ Features
@@ -64,10 +54,9 @@ The application allows users to:
 - 🔄 Switch AI models without restarting the app
 - 💬 Session-based chat history
 - 📂 Conversation grouping (Today, Yesterday, This Week, Older)
-- 🕵️ Private Chat mode (never stored)
+- 🕵️ Private Chat mode (chat never stored)
 - ✍️ Writing & rewriting assistant
-- 📄 Resume & CV generation
-- 📝 Email writing assistant
+- 📄 Resume & Email writing assistant
 - 📚 Text summarization
 - 🌍 Language translation
 - 💻 Programming assistance
@@ -78,7 +67,6 @@ The application allows users to:
 - 📤 Share messages and conversations
 - 📥 Export conversations
 - 🌗 Light / Dark / System theme
-- 🔒 No analytics
 - 🔒 No tracking
 - 🔒 No cloud backend
 
@@ -161,35 +149,17 @@ AI Layer
 ```text
 offline-ai-assistant
 │
-├── app
-│   ├── MainActivity.kt
-│   ├── BaseApp.kt
-│   └── ...
-│
 ├── ai
 │   ├── engine
-│   │   ├── LlmEngine.kt
-│   │   ├── LlamaCppEngine.kt
-│   │   └── InferenceEngineImpl.kt (JNI)
-│   │
 │   ├── gguf
-│   │   └── GGUF metadata reader
+│   │   └── internal
 │   │
 │   ├── manager
-│   │   └── ModelManager.kt
-│   │
 │   └── model
-│       ├── LlmRequest.kt
-│       └── LlmResponse.kt
 │
 ├── data
 │   ├── download
-│   │   ├── ModelDownloadManager.kt
-│   │   └── DownloadState.kt
-│   │
 │   ├── llm
-│   │   └── ModelSessionManager.kt
-│   │
 │   ├── local
 │   │   ├── dao
 │   │   ├── database
@@ -202,8 +172,6 @@ offline-ai-assistant
 │   └── repository
 │
 ├── di
-│   └── Hilt modules
-│
 ├── domain
 │   ├── model
 │   ├── repository
@@ -221,7 +189,10 @@ offline-ai-assistant
 │   ├── navigation
 │   └── theme
 │
-└── utils
+├── utils
+│
+├── BaseApp.kt
+└── MainActivity.kt
 ```
 
 ---
@@ -362,25 +333,10 @@ It showcases:
 
 # 📸 Screenshots
 
-### 💬 Chat
-
 <p align="center">
   <img src="./screenshots/chat-1.png" width="180"/>
   <img src="./screenshots/chat-2.png" width="180"/>
   <img src="./screenshots/chat-3.png" width="180"/>
-</p>
-
-### 🤖 Model Selection
-
-<p align="center">
-  <img src="./screenshots/models-1.png" width="180"/>
-  <img src="./screenshots/models-2.png" width="180"/>
-</p>
-
-### ⚙️ Settings
-
-<p align="center">
-  <img src="./screenshots/settings.png" width="180"/>
 </p>
 
 > *More screenshots will be added as the project evolves.*
@@ -392,28 +348,6 @@ It showcases:
 A demo video will be added soon.
 
 > You can also build and run the project locally to experience the app.
-
----
-
-# 🔒 Privacy First
-
-Offline AI Assistant is designed around one core principle:
-
-> **Your conversations belong to you.**
-
-Unlike cloud-based AI applications, this app never sends your prompts or AI responses to external servers.
-
-### Privacy Features
-
-- ✅ No cloud inference
-- ✅ No user accounts
-- ✅ No analytics
-- ✅ No tracking
-- ✅ No advertisements
-- ✅ No conversation uploads
-- ✅ All AI processing happens locally
-
-Once a model has been downloaded, the application works completely offline.
 
 ---
 
@@ -460,7 +394,9 @@ Simply run the **app** module on an Android device.
 
 A physical device is recommended for the best AI performance.
 
-**Minimum SDK:** 30
+Minimum SDK: **30**
+
+Target SDK: **37**
 
 After launching the app:
 
@@ -528,11 +464,9 @@ git push origin feature/my-feature
 
 Planned features include:
 
-- [ ] Markdown rendering
 - [ ] Code syntax highlighting
 - [ ] Chat search
 - [ ] Chat pinning
-- [ ] Chat folders
 - [ ] Image understanding (vision models)
 - [ ] Document summarization
 - [ ] RAG (Retrieval-Augmented Generation)
@@ -602,33 +536,15 @@ Without these projects, building local AI applications would be far more difficu
 
 ---
 
-# 👨‍💻 Author
+## 👨‍💻 Author
 
-## Hazrat Bilal
+**Hazrat Bilal**  
+Senior Android Engineer  
+Kotlin • Jetpack Compose • MVVM • Clean Architecture • Kotlin Multiplatform (KMP) • Flutter
 
-**Senior Android Engineer**
-
-Specializing in:
-
-- Kotlin
-- Jetpack Compose
-- MVVM
-- Clean Architecture
-- Android SDK
-- Offline AI
-- Kotlin Multiplatform (KMP)
-- Flutter
-
-### Connect with me
-
-🌐 Portfolio  
-https://hazratbilal.com
-
-💼 LinkedIn  
-https://linkedin.com/in/its-hazratbilal
-
-💻 GitHub  
-https://github.com/its-hazratbilal
+[![Portfolio](https://img.shields.io/badge/Portfolio-Visit%20Website-0A66C2?style=flat&logo=googlechrome&logoColor=white)](https://hazratbilal.com)
+[![GitHub](https://img.shields.io/badge/GitHub-its--hazratbilal-181717?style=flat&logo=github)](https://github.com/its-hazratbilal)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Hazrat%20Bilal-0077B5?style=flat&logo=linkedin)](https://linkedin.com/in/its-hazratbilal)
 
 If you enjoy this project, feel free to connect or reach out.
 
