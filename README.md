@@ -64,8 +64,7 @@ Designed with a privacy-first philosophy, Offline AI Assistant delivers a fast, 
 - 💬 Session-based chat history
 - 📂 Conversation grouping (Today, Yesterday, This Week, Older)
 - 🕵️ Private Chat mode (chat never stored)
-- ✍️ Writing & rewriting assistant
-- 📄 Resume & Email writing assistant
+- ✍️ AI writing assistant (emails, resumes, rewriting)
 - 📚 Text summarization
 - 🌍 Language translation
 - 💻 Programming assistance
@@ -89,7 +88,7 @@ The application currently supports the following GGUF models:
 | SmolLM2 360M | Q4_K_M | **258 MB** | 2 GB+ |
 | Qwen 2.5 Mini (0.5B) | Q4_K_M | **468 MB** | 3 GB+ |
 | TinyLlama 1.1B | Q4_K_M | **637 MB** | 4 GB+ |
-| **Gemma 3 1B (Recommended)** | Q4_K_M | **768 MB** | 6 GB+ |
+| **Gemma 3 1B ⭐ Recommended** | Q4_K_M | **768 MB** | 6 GB+ |
 | Gemma 3 4B | Q4_K_M | **2.37 GB** | 8 GB+ |
 
 ---
@@ -456,7 +455,7 @@ Planned features include:
 
 ## 🎯 What This Project Demonstrates
 
-Offline AI Assistant showcases a production-style Android application built around modern on-device AI technologies.
+This repository demonstrates how to build a production-style Android application around modern on-device AI technologies.
 
 This project demonstrates:
 
