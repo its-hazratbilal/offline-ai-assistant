@@ -6,9 +6,9 @@
 
 <p align="center">
   <img src="https://img.shields.io/github/stars/its-hazratbilal/offline-ai-assistant?style=for-the-badge"/>
-  <img src="https://img.shields.io/github/license/its-hazratbilal/offline-ai-assistant?style=for-the-badge"/>
   <img src="https://img.shields.io/github/last-commit/its-hazratbilal/offline-ai-assistant?style=for-the-badge"/>
   <img src="https://img.shields.io/github/issues/its-hazratbilal/offline-ai-assistant?style=for-the-badge"/>
+  <img src="https://img.shields.io/github/license/its-hazratbilal/offline-ai-assistant?style=for-the-badge"/>
 </p>
 
 <p align="center">
@@ -21,7 +21,7 @@
 <img src="https://img.shields.io/badge/Jetpack%20Compose-4285F4?style=for-the-badge&logo=android&logoColor=white"/>
 <img src="https://img.shields.io/badge/MVVM-Architecture-FF6F00?style=for-the-badge"/>
 <img src="https://img.shields.io/badge/Clean-Architecture-00C853?style=for-the-badge"/>
-<img src="https://img.shields.io/badge/llama.cpp-JNI-000000?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/llama.cpp-LLM-000000?style=for-the-badge"/>
 <img src="https://img.shields.io/badge/C%2B%2B-JNI-00599C?style=for-the-badge&logo=cplusplus&logoColor=white"/>
 </p>
 
