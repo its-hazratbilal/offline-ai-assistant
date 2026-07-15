@@ -378,7 +378,7 @@ After launching the app:
 | Requirement | Recommended |
 |-------------|-------------|
 | Android Version | Android 11 (API 30)+ |
-| RAM | 4 GB minimum (8 GB+ recommended) |
+| RAM | 4 GB minimum (8 GB recommended) |
 | Storage | Up to 3 GB free for larger models |
 | Internet | Required only for downloading models |
 
