@@ -37,14 +37,6 @@ Once a model is downloaded, all AI inference happens completely on-device.
 
 Designed with a privacy-first approach, the app provides a smooth and modern chat experience while supporting multiple open-source language models.
 
-### Highlights
-
-- 🔒 Privacy-first
-- ⚡ Fast local inference
-- 📱 Fully offline after downloading a model
-- 🧠 Multiple GGUF language models
-- 🎨 Modern Material 3 UI
-
 ---
 
 # ✨ Features
