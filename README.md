@@ -27,6 +27,23 @@
 
 ---
 
+## 📑 Table of Contents
+
+- [📱 Overview](#-overview)
+- [✨ Features](#-features)
+- [🤖 Supported Models](#-supported-models)
+- [🛠 Tech Stack](#-tech-stack)
+- [🧠 Architecture](#-architecture)
+- [📂 Project Structure](#-project-structure)
+- [🚀 Getting Started](#-getting-started)
+- [📱 Device Requirements](#-device-requirements)
+- [📦 Download](#-download)
+- [🤝 Contributing](#-contributing)
+- [🛣️ Roadmap](#️-roadmap)
+- [📄 License](#-license)
+
+---
+
 ## 📱 Overview
 
 **Offline AI Assistant** is a modern Android application that brings powerful AI directly to your device.
@@ -35,7 +52,7 @@ Unlike cloud-based AI assistants, every conversation runs locally using **GGUF l
 
 Once a model is downloaded, all AI inference happens completely on-device.
 
-Designed with a privacy-first philosophy, the app provides a smooth and modern chat experience while supporting multiple open-source language models.
+Designed with a privacy-first philosophy, Offline AI Assistant delivers a fast, modern, and completely offline AI experience while supporting multiple open-source language models.
 
 ---
 
@@ -59,8 +76,7 @@ Designed with a privacy-first philosophy, the app provides a smooth and modern c
 - 📤 Share messages and conversations
 - 📥 Export conversations
 - 🌗 Light / Dark / System theme
-- 🔒 No tracking
-- 🔒 No cloud backend
+- 🔒 No cloud processing
 
 ---
 
@@ -74,18 +90,7 @@ The application currently supports the following GGUF models:
 | Qwen 2.5 Mini (0.5B) | Q4_K_M | **468 MB** | 3 GB+ |
 | TinyLlama 1.1B | Q4_K_M | **637 MB** | 4 GB+ |
 | **Gemma 3 1B (Recommended)** | Q4_K_M | **768 MB** | 6 GB+ |
-| Gemma 3 Advanced (4B) | Q4_K_M | **2.37 GB** | 8 GB+ |
-
----
-
-## 📱 Device Requirements
-
-| Requirement | Recommended |
-|-------------|-------------|
-| Android Version | Android 11 (API 30)+ |
-| RAM | 4 GB minimum (8 GB+ recommended) |
-| Storage | Up to 3 GB free for larger models |
-| Internet | Required only for downloading models |
+| Gemma 3 4B | Q4_K_M | **2.37 GB** | 8 GB+ |
 
 ---
 
@@ -217,14 +222,14 @@ offline-ai-assistant
 
 This project follows modern Android development best practices:
 
-- MVVM Architecture
-- Clean Architecture
-- Repository Pattern
-- Single Source of Truth
-- Dependency Injection with Hilt
-- StateFlow + Coroutines
-- Offline-first design
-- Native AI inference using JNI & llama.cpp
+- **MVVM Architecture**
+- **Clean Architecture**
+- **Repository Pattern**
+- **Single Source of Truth**
+- **Dependency Injection with Hilt**
+- **StateFlow + Coroutines**
+- **Offline-first Design**
+- **Native AI Inference using JNI & llama.cpp**
 
 ---
 
@@ -351,9 +356,9 @@ The first build may take a few minutes while the native library is compiled.
 
 ### Build & Run
 
-Simply run the **app** module on an Android device.
+Run the app module from Android Studio on a physical Android device.
 
-A physical device is recommended for the best AI performance.
+For the best performance, a device with at least **8 GB RAM** is recommended when using larger models.
 
 Minimum SDK: **30**
 
@@ -365,6 +370,17 @@ After launching the app:
 2. Download the model.
 3. Wait for the model to finish loading.
 4. Start chatting completely offline.
+
+---
+
+## 📱 Device Requirements
+
+| Requirement | Recommended |
+|-------------|-------------|
+| Android Version | Android 11 (API 30)+ |
+| RAM | 4 GB minimum (8 GB+ recommended) |
+| Storage | Up to 3 GB free for larger models |
+| Internet | Required only for downloading models |
 
 ---
 
@@ -382,9 +398,9 @@ The application has been tested on Android devices running Android 11 and above.
 
 Performance depends on:
 
-- Device RAM
+- Available RAM
 - CPU performance
-- Selected GGUF model size
+- Selected GGUF model
 
 Larger models provide better responses but require more memory.
 
@@ -434,7 +450,7 @@ Planned features include:
 - [ ] More GGUF models
 - [ ] Better GPU acceleration
 - [ ] Tablet UI optimization
-- [ ] Compose Multiplatform support
+- [ ] Kotlin Multiplatform (KMP) support
 
 ---
 
@@ -483,8 +499,8 @@ Special thanks to:
 
 - **llama.cpp** — Fast and efficient on-device LLM inference
 - **GGUF** — Standard format for quantized language models
-- **Google** — Gemma open models
-- **Alibaba Cloud** — Qwen models
+- **Google** — Gemma
+- **Alibaba Cloud** — Qwen
 - **TinyLlama** contributors
 - **SmolLM2** contributors
 - **Hugging Face** — Model hosting and distribution
