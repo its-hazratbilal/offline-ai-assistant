@@ -73,7 +73,7 @@ Designed with a privacy-first philosophy, Offline AI Assistant delivers a fast, 
 - ⏹️ Stop AI response generation
 - 📋 Copy AI responses
 - 📤 Share messages and conversations
-- 📥 Export conversations
+- 📥 Export messages and conversations
 - 🌗 Light / Dark / System theme
 - 🔒 No cloud processing
 
