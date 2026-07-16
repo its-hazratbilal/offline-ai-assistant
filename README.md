@@ -1,7 +1,7 @@
 # 🤖 Offline AI Assistant
 
 <p align="center">
-  <img src="./screenshots/logo.png" width="120" alt="Offline AI Assistant Logo"/>
+  <img src="./screenshots/logo.png" width="140" alt="Offline AI Assistant Logo"/>
 </p>
 
 <p align="center">
@@ -323,9 +323,7 @@ AI Response
 
 ## 🎥 Demo
 
-A demo video will be added soon.
-
-> You can also build and run the project locally to experience the app.
+👉 [Watch on YouTube](https://www.youtube.com/watch?v=v6mUB1AA4QM)
 
 ---
 
