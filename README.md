@@ -299,12 +299,25 @@ AI Response
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="./screenshots/chat-1.png" width="180"/>
-  <img src="./screenshots/chat-2.png" width="180"/>
-  <img src="./screenshots/chat-3.png" width="180"/>
+  <img src="./screenshots/screenshot-1.jpg" width="180" alt="screenshot-1"/>
+  <img src="./screenshots/screenshot-2.jpg" width="180" alt="screenshot-2"/>
+  <img src="./screenshots/screenshot-3.jpg" width="180" alt="screenshot-3"/>
+  <img src="./screenshots/screenshot-4.jpg" width="180" alt="screenshot-4"/>
 </p>
 
-> *More screenshots will be added as the project evolves.*
+<p align="center">
+  <img src="./screenshots/screenshot-5.jpg" width="180" alt="screenshot-5"/>
+  <img src="./screenshots/screenshot-6.jpg" width="180" alt="screenshot-6"/>
+  <img src="./screenshots/screenshot-7.jpg" width="180" alt="screenshot-7"/>
+  <img src="./screenshots/screenshot-8.jpg" width="180" alt="screenshot-8"/>
+</p>
+
+<p align="center">
+  <img src="./screenshots/screenshot-9.jpg" width="180" alt="screenshot-9"/>
+  <img src="./screenshots/screenshot-10.jpg" width="180" alt="screenshot-10"/>
+  <img src="./screenshots/screenshot-11.jpg" width="180" alt="screenshot-11"/>
+  <img src="./screenshots/screenshot-12.jpg" width="180" alt="screenshot-12"/>
+</p>
 
 ---
 
