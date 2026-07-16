@@ -75,7 +75,6 @@ Designed with a privacy-first philosophy, Offline AI Assistant delivers a fast, 
 - 📤 Share messages and conversations
 - 📥 Export messages and conversations
 - 🌗 Light / Dark / System theme
-- 🔒 No cloud processing
 
 ---
 
