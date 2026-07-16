@@ -63,7 +63,7 @@ Designed with a privacy-first philosophy, Offline AI Assistant delivers a fast, 
 - 🔄 Switch AI models without restarting the app
 - 💬 Session-based chat history
 - 📂 Conversation grouping (Today, Yesterday, This Week, Older)
-- 🕵️ Private Chat mode (chat never stored)
+- 🕵️ Private Chat mode (no chat history)
 - ✍️ AI writing assistant (emails, resumes, rewriting)
 - 📚 Text summarization
 - 🌍 Language translation
