@@ -108,6 +108,7 @@ The application currently supports the following GGUF models:
 | Kotlin Coroutines | Background operations |
 | Kotlin Flow | Reactive UI state |
 | OkHttp | GGUF model downloading |
+| GGUF Models | Quantized on-device AI models |
 | llama.cpp | Local LLM inference engine |
 | C++ / JNI | Native AI integration |
 | Android SpeechRecognizer | Voice input |
