@@ -1,7 +1,7 @@
 # 🤖 Offline AI Assistant
 
 <p align="center">
-  <img src="./screenshots/logo.png" width="120" alt="Offline AI Assistant Logo"/>
+  <img src="./screenshots/logo.png" width="140" alt="Offline AI Assistant Logo"/>
 </p>
 
 <p align="center">
@@ -63,7 +63,7 @@ Designed with a privacy-first philosophy, Offline AI Assistant delivers a fast, 
 - 🔄 Switch AI models without restarting the app
 - 💬 Session-based chat history
 - 📂 Conversation grouping (Today, Yesterday, This Week, Older)
-- 🕵️ Private Chat mode (chat never stored)
+- 🕵️ Private Chat mode (no chat history)
 - ✍️ AI writing assistant (emails, resumes, rewriting)
 - 📚 Text summarization
 - 🌍 Language translation
@@ -73,9 +73,8 @@ Designed with a privacy-first philosophy, Offline AI Assistant delivers a fast, 
 - ⏹️ Stop AI response generation
 - 📋 Copy AI responses
 - 📤 Share messages and conversations
-- 📥 Export conversations
+- 📥 Export messages and conversations
 - 🌗 Light / Dark / System theme
-- 🔒 No cloud processing
 
 ---
 
@@ -109,6 +108,7 @@ The application currently supports the following GGUF models:
 | Kotlin Coroutines | Background operations |
 | Kotlin Flow | Reactive UI state |
 | OkHttp | GGUF model downloading |
+| GGUF Models | Quantized on-device AI models |
 | llama.cpp | Local LLM inference engine |
 | C++ / JNI | Native AI integration |
 | Android SpeechRecognizer | Voice input |
@@ -299,20 +299,31 @@ AI Response
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="./screenshots/chat-1.png" width="180"/>
-  <img src="./screenshots/chat-2.png" width="180"/>
-  <img src="./screenshots/chat-3.png" width="180"/>
+  <img src="./screenshots/screenshot-1.jpg" width="180" alt="screenshot-1"/>
+  <img src="./screenshots/screenshot-2.jpg" width="180" alt="screenshot-2"/>
+  <img src="./screenshots/screenshot-3.jpg" width="180" alt="screenshot-3"/>
+  <img src="./screenshots/screenshot-4.jpg" width="180" alt="screenshot-4"/>
 </p>
 
-> *More screenshots will be added as the project evolves.*
+<p align="center">
+  <img src="./screenshots/screenshot-5.jpg" width="180" alt="screenshot-5"/>
+  <img src="./screenshots/screenshot-6.jpg" width="180" alt="screenshot-6"/>
+  <img src="./screenshots/screenshot-7.jpg" width="180" alt="screenshot-7"/>
+  <img src="./screenshots/screenshot-8.jpg" width="180" alt="screenshot-8"/>
+</p>
+
+<p align="center">
+  <img src="./screenshots/screenshot-9.jpg" width="180" alt="screenshot-9"/>
+  <img src="./screenshots/screenshot-10.jpg" width="180" alt="screenshot-10"/>
+  <img src="./screenshots/screenshot-11.jpg" width="180" alt="screenshot-11"/>
+  <img src="./screenshots/screenshot-12.jpg" width="180" alt="screenshot-12"/>
+</p>
 
 ---
 
 ## 🎥 Demo
 
-A demo video will be added soon.
-
-> You can also build and run the project locally to experience the app.
+👉 [Watch on YouTube](https://www.youtube.com/watch?v=v6mUB1AA4QM)
 
 ---
 
