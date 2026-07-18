@@ -105,6 +105,7 @@ import com.hazratbilal.offlineaiassistant.domain.model.ChatMessage
 import com.hazratbilal.offlineaiassistant.domain.model.ChatSession
 import com.hazratbilal.offlineaiassistant.ui.common.fadeTopEdge
 import com.hazratbilal.offlineaiassistant.utils.FileDownloader
+import com.hazratbilal.offlineaiassistant.utils.MarkdownStripper
 import com.mikepenz.markdown.m3.Markdown
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -199,7 +200,7 @@ fun ChatScreen(
     fun shareMessage(message: ChatMessage) {
         val shareIntent = Intent(Intent.ACTION_SEND).apply {
             type = "text/plain"
-            putExtra(Intent.EXTRA_TEXT, message.response)
+            putExtra(Intent.EXTRA_TEXT, MarkdownStripper.toPlainText(message.response))
         }
 
         context.startActivity(
@@ -214,7 +215,7 @@ fun ChatScreen(
                 appendLine(message.request)
                 appendLine()
                 appendLine("AI:")
-                appendLine(message.response)
+                appendLine(MarkdownStripper.toPlainText(message.response))
                 appendLine()
                 appendLine("----------------------------------------")
                 appendLine()
@@ -463,7 +464,7 @@ fun ChatScreen(
                                     onCopy = { text ->
                                         scope.launch {
                                             clipboard.setClipEntry(
-                                                ClipEntry(ClipData.newPlainText("message", text))
+                                                ClipEntry(ClipData.newPlainText("message", MarkdownStripper.toPlainText(text)))
                                             )
                                         }
                                     },

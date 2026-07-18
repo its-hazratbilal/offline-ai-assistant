@@ -24,7 +24,7 @@ class ChatExporter @Inject constructor(
                 writer.write("=".repeat(title.length) + "\n\n")
                 messages.forEach { msg ->
                     writer.write("You: ${msg.request}\n\n")
-                    writer.write("AI: ${msg.response}\n\n")
+                    writer.write("AI: ${MarkdownStripper.toPlainText(msg.response)}\n\n")
                     writer.write("-".repeat(40) + "\n\n")
                 }
             }
@@ -38,7 +38,7 @@ class ChatExporter @Inject constructor(
 
             file.bufferedWriter().use { writer ->
                 writer.write("You: ${message.request}\n\n")
-                writer.write("AI: ${message.response}\n")
+                writer.write("AI: ${MarkdownStripper.toPlainText(message.response)}\n")
             }
             file
         }
