@@ -53,7 +53,7 @@ fun OpenSourceLicensesScreen(
                 ) {
                     Column(modifier = Modifier.padding(16.dp)) {
                         Text(
-                            text = "Offline AI Assistant is built using several open-source libraries, frameworks, and AI technologies. We sincerely thank the developers and communities behind these projects.",
+                            text = "Offline AI Assistant is built using several open-source libraries, frameworks, and AI technologies. I sincerely thank the developers and communities behind these projects.",
                             style = MaterialTheme.typography.bodyMedium,
                             color = MaterialTheme.colorScheme.onSurfaceVariant
                         )

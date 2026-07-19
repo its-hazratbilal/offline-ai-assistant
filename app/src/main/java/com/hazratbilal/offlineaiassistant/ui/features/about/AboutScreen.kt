@@ -217,9 +217,7 @@ private fun AboutRow(
     onClick: () -> Unit,
     showDivider: Boolean = true
 ) {
-
     Column {
-
         Row(
             modifier = Modifier
                 .fillMaxWidth()
@@ -227,7 +225,6 @@ private fun AboutRow(
                 .padding(horizontal = 16.dp, vertical = 15.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-
             Icon(
                 imageVector = icon,
                 contentDescription = null,

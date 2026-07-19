@@ -15,6 +15,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
@@ -464,7 +465,12 @@ fun ChatScreen(
                                     onCopy = { text ->
                                         scope.launch {
                                             clipboard.setClipEntry(
-                                                ClipEntry(ClipData.newPlainText("message", MarkdownStripper.toPlainText(text)))
+                                                ClipEntry(
+                                                    ClipData.newPlainText(
+                                                        "message",
+                                                        MarkdownStripper.toPlainText(text)
+                                                    )
+                                                )
                                             )
                                         }
                                     },
@@ -489,13 +495,12 @@ fun ChatScreen(
                             state.pendingUserMessage?.let { pendingText ->
                                 item {
                                     Column(modifier = Modifier.fillMaxWidth()) {
-                                        Row(
-                                            modifier = Modifier.fillMaxWidth(),
-                                            horizontalArrangement = Arrangement.End
-                                        ) {
+                                        BoxWithConstraints(Modifier.fillMaxWidth()) {
                                             Card(
+                                                modifier = Modifier
+                                                    .align(Alignment.TopEnd)
+                                                    .widthIn(max = maxWidth * 0.9f),
                                                 shape = MaterialTheme.shapes.medium,
-                                                modifier = Modifier.widthIn(max = 330.dp)
                                             ) {
                                                 Text(
                                                     text = pendingText,
@@ -698,10 +703,12 @@ private fun ChatMessageBubble(
 ) {
     Column(modifier = Modifier.fillMaxWidth()) {
 
-        Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.End) {
+        BoxWithConstraints(Modifier.fillMaxWidth()) {
             Card(
+                modifier = Modifier
+                    .align(Alignment.TopEnd)
+                    .widthIn(max = maxWidth * 0.9f),
                 shape = MaterialTheme.shapes.medium,
-                modifier = Modifier.widthIn(max = 330.dp)
             ) {
                 Text(
                     text = message.request,
