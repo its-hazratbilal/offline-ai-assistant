@@ -460,7 +460,6 @@ Planned features include:
 - [ ] More GGUF models
 - [ ] Better GPU acceleration
 - [ ] Tablet UI optimization
-- [ ] Kotlin Multiplatform (KMP) support
 
 ---
 
