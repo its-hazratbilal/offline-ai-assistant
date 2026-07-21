@@ -459,7 +459,6 @@ Planned features include:
 - [ ] Streaming response improvements
 - [ ] More GGUF models
 - [ ] Better GPU acceleration
-- [ ] Tablet UI optimization
 
 ---
 
