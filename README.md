@@ -455,8 +455,6 @@ Planned features include:
 - [ ] Document summarization
 - [ ] Image understanding (Vision models)
 - [ ] RAG support
-- [ ] Function calling
-- [ ] Streaming response improvements
 - [ ] More GGUF models
 - [ ] Better GPU acceleration
 
