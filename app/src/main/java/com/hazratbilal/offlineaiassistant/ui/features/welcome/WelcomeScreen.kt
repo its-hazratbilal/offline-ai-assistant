@@ -99,7 +99,7 @@ fun WelcomeScreen(onChooseClick: () -> Unit) {
 
             FeatureItem(
                 icon = Icons.Default.Email,
-                text = "Write emails, resumes & documents"
+                text = "Write emails & resumes"
             )
 
             FeatureItem(
