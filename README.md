@@ -451,10 +451,10 @@ Planned features include:
 
 - [ ] Chat search
 - [ ] Chat pinning
-- [ ] Code syntax highlighting
 - [ ] Document summarization
 - [ ] Image understanding (Vision models)
 - [ ] RAG support
+- [ ] Code syntax highlighting
 - [ ] More GGUF models
 - [ ] Better GPU acceleration
 
