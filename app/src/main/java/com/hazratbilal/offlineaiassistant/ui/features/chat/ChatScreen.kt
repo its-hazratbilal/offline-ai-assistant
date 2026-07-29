@@ -33,6 +33,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.outlined.VolumeUp
 import androidx.compose.material.icons.filled.ArrowUpward
@@ -108,6 +109,7 @@ import com.hazratbilal.offlineaiassistant.ui.common.fadeTopEdge
 import com.hazratbilal.offlineaiassistant.utils.FileDownloader
 import com.hazratbilal.offlineaiassistant.utils.MarkdownStripper
 import com.mikepenz.markdown.m3.Markdown
+import com.mikepenz.markdown.m3.markdownTypography
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import java.util.Calendar
@@ -503,14 +505,16 @@ fun ChatScreen(
                                                     .widthIn(max = maxWidth * 0.9f),
                                                 shape = MaterialTheme.shapes.medium,
                                             ) {
-                                                Text(
-                                                    text = pendingText,
-                                                    style = MaterialTheme.typography.bodyMedium,
-                                                    modifier = Modifier.padding(
-                                                        horizontal = 14.dp,
-                                                        vertical = 10.dp
+                                                SelectionContainer {
+                                                    Text(
+                                                        text = pendingText,
+                                                        style = MaterialTheme.typography.bodyMedium,
+                                                        modifier = Modifier.padding(
+                                                            horizontal = 14.dp,
+                                                            vertical = 10.dp
+                                                        )
                                                     )
-                                                )
+                                                }
                                             }
                                         }
 
@@ -723,11 +727,13 @@ private fun ChatMessageBubble(
                         .widthIn(max = maxWidth * 0.9f),
                     shape = MaterialTheme.shapes.medium,
                 ) {
-                    Text(
-                        text = message.request,
-                        style = MaterialTheme.typography.bodyMedium,
-                        modifier = Modifier.padding(horizontal = 14.dp, vertical = 10.dp)
-                    )
+                    SelectionContainer {
+                        Text(
+                            text = message.request,
+                            style = MaterialTheme.typography.bodyMedium,
+                            modifier = Modifier.padding(horizontal = 14.dp, vertical = 10.dp)
+                        )
+                    }
                 }
             }
 
@@ -741,9 +747,14 @@ private fun ChatMessageBubble(
                     style = MaterialTheme.typography.bodyMedium
                 )
             } else {
-                Markdown(
-                    content = message.response
-                )
+                SelectionContainer {
+                    Markdown(
+                        content = message.response,
+                        typography = markdownTypography(
+                            text = MaterialTheme.typography.bodyMedium
+                        )
+                    )
+                }
             }
 
             if (!isStreaming) {
