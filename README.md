@@ -451,16 +451,12 @@ Planned features include:
 
 - [ ] Chat search
 - [ ] Chat pinning
-- [ ] Code syntax highlighting
 - [ ] Document summarization
 - [ ] Image understanding (Vision models)
 - [ ] RAG support
-- [ ] Function calling
-- [ ] Streaming response improvements
+- [ ] Code syntax highlighting
 - [ ] More GGUF models
 - [ ] Better GPU acceleration
-- [ ] Tablet UI optimization
-- [ ] Kotlin Multiplatform (KMP) support
 
 ---
 
