@@ -1,0 +1,2 @@
+# Exclude vendored llama.cpp source from GitHub's language statistics
+app/src/main/cpp/llama.cpp/** linguist-vendored
