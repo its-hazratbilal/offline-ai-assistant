@@ -10,18 +10,19 @@ class ChatUseCase @Inject constructor(
 ) {
     suspend operator fun invoke(
         sessionId: Long?,
-        message: String,
+        displayMessage: String,
         promptForModel: String,
-        systemPrompt: String?
+        systemPrompt: String?,
+        onToken: (String) -> Unit
     ): Result<ChatMessage> {
-        if (message.isBlank()) {
+        if (displayMessage.isBlank()) {
             return Result.Error("Please enter a message")
         }
 
         return if (sessionId != null) {
-            repository.sendMessage(sessionId, message, promptForModel, systemPrompt)
+            repository.sendMessageStreaming(sessionId, displayMessage, promptForModel, systemPrompt, onToken)
         } else {
-            repository.sendMessageEphemeral(message, promptForModel, systemPrompt)
+            repository.sendMessageEphemeralStreaming(displayMessage, promptForModel, systemPrompt, onToken)
         }
     }
 }

@@ -22,23 +22,33 @@ class ChatRepositoryImpl @Inject constructor(
     private val mapper: ChatMapper
 ) : ChatRepository {
 
-    override suspend fun sendMessage(
+    override suspend fun sendMessageStreaming(
         sessionId: Long,
-        message: String,
+        displayMessage: String,
         promptForModel: String,
-        systemPrompt: String?
+        systemPrompt: String?,
+        onToken: (String) -> Unit
     ): Result<ChatMessage> {
         return try {
             val llmRequest = LlmRequest(prompt = promptForModel, systemPrompt = systemPrompt)
-            val llmResponse = llmDataSource.generateResponse(llmRequest)
+            val fullResponse = StringBuilder()
 
-            val entity = ChatEntity(sessionId = sessionId, request = message, response = llmResponse.generatedText)
+            llmDataSource.generateResponseStream(llmRequest).collect { token ->
+                fullResponse.append(token)
+                onToken(fullResponse.toString())
+            }
+
+            val entity = ChatEntity(
+                sessionId = sessionId,
+                request = displayMessage,
+                response = fullResponse.toString()
+            )
             val insertedId = chatDao.insert(entity)
 
             val session = chatSessionDao.getSessionById(sessionId)
             chatSessionDao.updateTitleAndTimestamp(
                 sessionId = sessionId,
-                title = if (session?.title == "New Chat" || session == null) message.take(40) else session.title,
+                title = if (session?.title == "New Chat" || session == null) displayMessage.take(40) else session.title,
                 updatedAt = System.currentTimeMillis()
             )
 
@@ -50,20 +60,26 @@ class ChatRepositoryImpl @Inject constructor(
         }
     }
 
-    override suspend fun sendMessageEphemeral(
-        message: String,
+    override suspend fun sendMessageEphemeralStreaming(
+        displayMessage: String,
         promptForModel: String,
-        systemPrompt: String?
+        systemPrompt: String?,
+        onToken: (String) -> Unit
     ): Result<ChatMessage> {
         return try {
             val llmRequest = LlmRequest(prompt = promptForModel, systemPrompt = systemPrompt)
-            val llmResponse = llmDataSource.generateResponse(llmRequest)
+            val fullResponse = StringBuilder()
+
+            llmDataSource.generateResponseStream(llmRequest).collect { token ->
+                fullResponse.append(token)
+                onToken(fullResponse.toString())
+            }
 
             Result.Success(
                 ChatMessage(
                     id = 0,
-                    request = message,
-                    response = llmResponse.generatedText,
+                    request = displayMessage,
+                    response = fullResponse.toString(),
                     timestamp = System.currentTimeMillis()
                 )
             )

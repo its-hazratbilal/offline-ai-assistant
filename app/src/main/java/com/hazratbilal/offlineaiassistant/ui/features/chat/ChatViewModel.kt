@@ -203,6 +203,7 @@ class ChatViewModel @Inject constructor(
                 pendingAiText = null,
                 isLoading = true,
                 isThinking = true,
+                isStreaming = false,
                 error = null,
                 assistantGreeting = null
             )
@@ -250,12 +251,27 @@ class ChatViewModel @Inject constructor(
                     _uiState.update { it.copy(needsHistoryReplay = false) }
                 }
 
-                when (val result = chatUseCase(sessionId, currentMessage, effectiveMessage, systemPrompt)) {
+                when (val result = chatUseCase(
+                    sessionId,
+                    currentMessage,
+                    effectiveMessage,
+                    systemPrompt,
+                    onToken = { partialText ->
+                        _uiState.update {
+                            it.copy(
+                                isThinking = false,
+                                isStreaming = true,
+                                pendingAiText = partialText
+                            )
+                        }
+                    }
+                )) {
                     is Result.Success -> {
                         _uiState.update { current ->
                             current.copy(
                                 isLoading = false,
                                 isThinking = false,
+                                isStreaming = false,
                                 pendingUserMessage = null,
                                 pendingAiText = null,
                                 messages = if (current.isPrivateChat) current.messages + result.data else current.messages
@@ -267,6 +283,7 @@ class ChatViewModel @Inject constructor(
                             it.copy(
                                 isLoading = false,
                                 isThinking = false,
+                                isStreaming = false,
                                 pendingUserMessage = null,
                                 pendingAiText = null,
                                 error = result.message
@@ -279,6 +296,7 @@ class ChatViewModel @Inject constructor(
                     it.copy(
                         isLoading = false,
                         isThinking = false,
+                        isStreaming = false,
                         pendingAiText = "Response stopped."
                     )
                 }

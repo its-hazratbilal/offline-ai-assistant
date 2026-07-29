@@ -6,8 +6,21 @@ import com.hazratbilal.offlineaiassistant.utils.Result
 import kotlinx.coroutines.flow.Flow
 
 interface ChatRepository {
-    suspend fun sendMessage(sessionId: Long, message: String, promptForModel: String, systemPrompt: String?): Result<ChatMessage>
-    suspend fun sendMessageEphemeral(message: String, promptForModel: String, systemPrompt: String?): Result<ChatMessage>
+
+    suspend fun sendMessageStreaming(
+        sessionId: Long,
+        displayMessage: String,
+        promptForModel: String,
+        systemPrompt: String?,
+        onToken: (String) -> Unit
+    ): Result<ChatMessage>
+
+    suspend fun sendMessageEphemeralStreaming(
+        displayMessage: String,
+        promptForModel: String,
+        systemPrompt: String?,
+        onToken: (String) -> Unit
+    ): Result<ChatMessage>
 
     fun getMessages(sessionId: Long): Flow<List<ChatMessage>>
     fun getSessions(): Flow<List<ChatSession>>

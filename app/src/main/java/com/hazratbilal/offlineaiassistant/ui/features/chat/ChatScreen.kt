@@ -402,7 +402,7 @@ fun ChatScreen(
                                 Image(
                                     painter = painterResource(id = R.drawable.logo),
                                     contentDescription = null,
-                                    modifier = Modifier.size(48.dp)
+                                    modifier = Modifier.size(56.dp)
                                 )
                                 Spacer(Modifier.height(12.dp))
                                 Text(
@@ -461,6 +461,7 @@ fun ChatScreen(
                             items(state.messages) { chatMessage ->
                                 ChatMessageBubble(
                                     message = chatMessage,
+                                    isStreaming = false,
                                     isPlaying = playingMessageId == chatMessage.id,
                                     onCopy = { text ->
                                         scope.launch {
@@ -513,7 +514,7 @@ fun ChatScreen(
                                             }
                                         }
 
-                                        Spacer(Modifier.height(8.dp))
+                                        Spacer(Modifier.height(14.dp))
 
                                         when {
                                             state.isThinking -> {
@@ -541,11 +542,21 @@ fun ChatScreen(
                                                 }
                                             }
 
-                                            state.pendingAiText != null -> {
-                                                Text(
-                                                    text = state.pendingAiText!!,
-                                                    style = MaterialTheme.typography.bodyMedium,
-                                                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                                            state.isStreaming || state.pendingAiText != null -> {
+                                                ChatMessageBubble(
+                                                    message = ChatMessage(
+                                                        id = -1,
+                                                        request = pendingText,
+                                                        response = state.pendingAiText ?: "",
+                                                        timestamp = System.currentTimeMillis()
+                                                    ),
+                                                    showRequest = false,
+                                                    isStreaming = true,
+                                                    isPlaying = false,
+                                                    onCopy = {},
+                                                    onPlay = {},
+                                                    onDownload = {},
+                                                    onShare = {}
                                                 )
                                             }
                                         }
@@ -695,6 +706,8 @@ fun ChatScreen(
 @Composable
 private fun ChatMessageBubble(
     message: ChatMessage,
+    showRequest: Boolean = true,
+    isStreaming: Boolean,
     isPlaying: Boolean,
     onCopy: (String) -> Unit,
     onPlay: () -> Unit,
@@ -702,38 +715,49 @@ private fun ChatMessageBubble(
     onShare: (ChatMessage) -> Unit
 ) {
     Column(modifier = Modifier.fillMaxWidth()) {
-
-        BoxWithConstraints(Modifier.fillMaxWidth()) {
-            Card(
-                modifier = Modifier
-                    .align(Alignment.TopEnd)
-                    .widthIn(max = maxWidth * 0.9f),
-                shape = MaterialTheme.shapes.medium,
-            ) {
-                Text(
-                    text = message.request,
-                    style = MaterialTheme.typography.bodyMedium,
-                    modifier = Modifier.padding(horizontal = 14.dp, vertical = 10.dp)
-                )
+        if (showRequest) {
+            BoxWithConstraints(Modifier.fillMaxWidth()) {
+                Card(
+                    modifier = Modifier
+                        .align(Alignment.TopEnd)
+                        .widthIn(max = maxWidth * 0.9f),
+                    shape = MaterialTheme.shapes.medium,
+                ) {
+                    Text(
+                        text = message.request,
+                        style = MaterialTheme.typography.bodyMedium,
+                        modifier = Modifier.padding(horizontal = 14.dp, vertical = 10.dp)
+                    )
+                }
             }
+
+            Spacer(Modifier.height(14.dp))
         }
 
-        Spacer(Modifier.height(12.dp))
-
         if (message.response.isNotBlank()) {
-            Markdown(
-                content = message.response
-            )
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                MessageActionIcon(Icons.Outlined.ContentCopy, "Copy") { onCopy(message.response) }
-                MessageActionIcon(
-                    icon = if (isPlaying) Icons.Default.Stop else Icons.AutoMirrored.Outlined.VolumeUp,
-                    description = if (isPlaying) "Stop" else "Play"
-                ) {
-                    onPlay()
+            if (isStreaming) {
+                Text(
+                    text = message.response,
+                    style = MaterialTheme.typography.bodyMedium
+                )
+            } else {
+                Markdown(
+                    content = message.response
+                )
+            }
+
+            if (!isStreaming) {
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    MessageActionIcon(Icons.Outlined.ContentCopy, "Copy") { onCopy(message.response) }
+                    MessageActionIcon(
+                        icon = if (isPlaying) Icons.Default.Stop else Icons.AutoMirrored.Outlined.VolumeUp,
+                        description = if (isPlaying) "Stop" else "Play"
+                    ) {
+                        onPlay()
+                    }
+                    MessageActionIcon(Icons.Outlined.Download, "Download") { onDownload(message) }
+                    MessageActionIcon(Icons.Outlined.Share, "Share") { onShare(message) }
                 }
-                MessageActionIcon(Icons.Outlined.Download, "Download") { onDownload(message) }
-                MessageActionIcon(Icons.Outlined.Share, "Share") { onShare(message) }
             }
         }
     }

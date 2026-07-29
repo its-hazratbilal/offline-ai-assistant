@@ -8,6 +8,7 @@ data class ChatUiState(
     val messages: List<ChatMessage> = emptyList(),
     val isLoading: Boolean = false,
     val isThinking: Boolean = false,
+    val isStreaming: Boolean = false,
     val isModelLoading: Boolean = true,
     val activeModelName: String? = null,
     val isActiveModelLightweight: Boolean = false,
