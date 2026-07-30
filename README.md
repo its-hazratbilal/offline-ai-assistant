@@ -62,9 +62,7 @@ Designed with a privacy-first philosophy, Offline AI Assistant delivers a fast, 
 
 > **🎬 Quick Demo**
 
-<div align="center">
 https://github.com/user-attachments/assets/eb393e72-e647-463e-9836-eb8644804d2d
-</div>
 
 > **📺 Full Walkthrough**
 
