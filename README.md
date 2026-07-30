@@ -30,6 +30,8 @@
 ## 📑 Table of Contents
 
 - [📱 Overview](#-overview)
+- [🎥 Demo](#-demo)
+- [🖼️ Screenshots](#-screenshots)
 - [✨ Features](#-features)
 - [🤖 Supported Models](#-supported-models)
 - [🛠 Tech Stack](#-tech-stack)
@@ -53,6 +55,43 @@ Unlike cloud-based AI assistants, every conversation runs locally using **GGUF l
 Once a model is downloaded, all AI inference happens completely on-device.
 
 Designed with a privacy-first philosophy, Offline AI Assistant delivers a fast, modern, and completely offline AI experience while supporting multiple open-source language models.
+
+---
+
+## 🎥 Demo
+
+> **🎬 Quick Demo**
+
+https://github.com/user-attachments/assets/YOUR_VIDEO_ID
+
+**📺 Full Walkthrough**
+
+👉 [Watch on YouTube](https://www.youtube.com/watch?v=v6mUB1AA4QM)
+
+---
+
+## 📸 Screenshots
+
+<p align="center">
+  <img src="./screenshots/screenshot-1.jpg" width="180" alt="screenshot-1"/>
+  <img src="./screenshots/screenshot-2.jpg" width="180" alt="screenshot-2"/>
+  <img src="./screenshots/screenshot-3.jpg" width="180" alt="screenshot-3"/>
+  <img src="./screenshots/screenshot-4.jpg" width="180" alt="screenshot-4"/>
+</p>
+
+<p align="center">
+  <img src="./screenshots/screenshot-5.jpg" width="180" alt="screenshot-5"/>
+  <img src="./screenshots/screenshot-6.jpg" width="180" alt="screenshot-6"/>
+  <img src="./screenshots/screenshot-7.jpg" width="180" alt="screenshot-7"/>
+  <img src="./screenshots/screenshot-8.jpg" width="180" alt="screenshot-8"/>
+</p>
+
+<p align="center">
+  <img src="./screenshots/screenshot-9.jpg" width="180" alt="screenshot-9"/>
+  <img src="./screenshots/screenshot-10.jpg" width="180" alt="screenshot-10"/>
+  <img src="./screenshots/screenshot-11.jpg" width="180" alt="screenshot-11"/>
+  <img src="./screenshots/screenshot-12.jpg" width="180" alt="screenshot-12"/>
+</p>
 
 ---
 
@@ -293,37 +332,6 @@ GGUF Model
       ▼
 AI Response
 ```
-
----
-
-## 📸 Screenshots
-
-<p align="center">
-  <img src="./screenshots/screenshot-1.jpg" width="180" alt="screenshot-1"/>
-  <img src="./screenshots/screenshot-2.jpg" width="180" alt="screenshot-2"/>
-  <img src="./screenshots/screenshot-3.jpg" width="180" alt="screenshot-3"/>
-  <img src="./screenshots/screenshot-4.jpg" width="180" alt="screenshot-4"/>
-</p>
-
-<p align="center">
-  <img src="./screenshots/screenshot-5.jpg" width="180" alt="screenshot-5"/>
-  <img src="./screenshots/screenshot-6.jpg" width="180" alt="screenshot-6"/>
-  <img src="./screenshots/screenshot-7.jpg" width="180" alt="screenshot-7"/>
-  <img src="./screenshots/screenshot-8.jpg" width="180" alt="screenshot-8"/>
-</p>
-
-<p align="center">
-  <img src="./screenshots/screenshot-9.jpg" width="180" alt="screenshot-9"/>
-  <img src="./screenshots/screenshot-10.jpg" width="180" alt="screenshot-10"/>
-  <img src="./screenshots/screenshot-11.jpg" width="180" alt="screenshot-11"/>
-  <img src="./screenshots/screenshot-12.jpg" width="180" alt="screenshot-12"/>
-</p>
-
----
-
-## 🎥 Demo
-
-👉 [Watch on YouTube](https://www.youtube.com/watch?v=v6mUB1AA4QM)
 
 ---
 
