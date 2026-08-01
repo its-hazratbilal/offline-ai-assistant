@@ -344,8 +344,8 @@ Before building the project, install:
 - Android Studio (latest stable)
 - Android SDK
 - Android NDK
-- CMake
 - JDK 17+
+- CMake
 
 > **Note:** This project compiles **llama.cpp** from source using the Android NDK. The first build may take a few minutes while the native libraries are compiled.
 
