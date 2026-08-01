@@ -1,4 +1,4 @@
-# 🤖 Offline AI Assistant
+<h1 align="center">🤖 Offline AI Assistant</h1>
 
 <p align="center">
   <img src="./screenshots/logo.png" width="140" alt="Offline AI Assistant Logo"/>
