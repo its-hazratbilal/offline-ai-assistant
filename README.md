@@ -341,11 +341,13 @@ AI Response
 
 Before building the project, install:
 
-- Android Studio Narwhal or newer
+- Android Studio (latest stable)
 - Android SDK
 - Android NDK
 - CMake
 - JDK 17+
+
+> **Note:** This project compiles **llama.cpp** from source using the Android NDK. The first build may take a few minutes while the native libraries are compiled.
 
 ---
 
@@ -356,19 +358,6 @@ git clone https://github.com/its-hazratbilal/offline-ai-assistant.git
 ```
 
 Open the project in Android Studio.
-
----
-
-### Native Build Requirements
-
-This project compiles **llama.cpp** from source using the Android NDK.
-
-Ensure the following SDK components are installed:
-
-- Android NDK
-- CMake
-
-The first build may take a few minutes while the native library is compiled.
 
 ---
 
