@@ -518,7 +518,7 @@ Without these projects, building local AI applications would be far more difficu
 
 **Hazrat Bilal**  
 Senior Android Engineer  
-Kotlin • Jetpack Compose • MVVM • Clean Architecture • Kotlin Multiplatform (KMP) • Flutter
+Kotlin • Jetpack Compose • Clean Architecture • MVVM • Kotlin Multiplatform (KMP) • Flutter
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-Visit%20Website-0A66C2?style=flat&logo=googlechrome&logoColor=white)](https://hazratbilal.com)
 [![GitHub](https://img.shields.io/badge/GitHub-its--hazratbilal-181717?style=flat&logo=github)](https://github.com/its-hazratbilal)
